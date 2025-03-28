@@ -1,3 +1,42 @@
+
+@media (max-width: 768px) {
+  /* Adjust overall section padding for mobile */
+  .section {
+    padding: 60px 10px;
+  }
+
+  /* Scale down the hero content */
+  .hero-content {
+    margin-top: 30px;
+  }
+
+  /* Resize profile picture */
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Adjust headings for mobile */
+  #hero-title, .hero-heading {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subheading {
+    font-size: 1.5rem;
+  }
+
+  /* For the pixel text container, reduce font size */
+  .pixel-text {
+    font-size: 2rem;
+  }
+  
+  /* Optionally, adjust the rocket animation if needed */
+  .rocket-3d {
+    width: 50px;
+  }
+}
+
+
 /* Reset and Global Styles */
 * {
     margin: 0;
