@@ -1,0 +1,557 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1e1e;
+    color: #eaeaea;
+    line-height: 1.6;
+  }
+  
+  /* Navigation & Header */
+  header {
+    background: #292929;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ff9800;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 120px 20px 60px;
+    min-height: 100vh;
+  }
+  
+  /* Hero Section */
+
+  /* Hero Section Overrides */
+#hero {
+    /* Keep your existing orange background, etc. */
+    background: linear-gradient(135deg, #ff9800, #e65100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* important if you use absolute positioning inside */
+  }
+  
+  .hero-content {
+    animation: fadeInUp 1.2s ease forwards;
+    margin-top: 60px; /* Adjust if your fixed header overlaps the hero */
+  }
+  /* Profile Picture */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+  }
+  .profile-pic:hover {
+    transform: scale(1.5);
+  }
+  
+  /* Hero Title and Subtitle (optional tweaks) */
+  #hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  #hero-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  
+  /* Container for Tech Images */
+  .tech-images {
+    position: relative;
+    width: 100%;
+    height: 150px; /* adjust if needed */
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Common styles for all tech images */
+  .tech-image {
+    position: absolute;
+    width: 70px;  /* adjust to your liking */
+    height: 70px;
+    animation: float 3s ease-in-out infinite;
+    /* Optional: Add a small drop shadow to stand out against the orange */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+  
+  /* Individual positions for each tech image */
+  .tech-image.react {
+    top: -30px;
+    left: -80px;
+  }
+  
+  .tech-image.node {
+    top: 10px;
+    right: -70px;
+  }
+  
+  .tech-image.js {
+    bottom: -30px;
+    left: 0;
+  }
+  
+  /* Simple floating animation */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  
+
+  
+  /* About, Projects, and Contact Sections */
+  #about, #projects, #contact {
+    background: #292929;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 40px;
+  }
+  
+  /* Project Items */
+  #projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .project {
+    background: #1e1e1e;
+    padding: 20px;
+    border-left: 4px solid #ff9800;
+    transition: transform 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateX(10px);
+  }
+  
+  .project h3 {
+    margin-bottom: 10px;
+    color: #ff9800;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #292929;
+    margin-top: 40px;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnim 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInAnim {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Staggered Animation for Sections */
+  .section.fade-in {
+    animation-delay: 0.5s;
+  }
+  
+
+
+
+
+/* Container for the text, centering it */
+.pixel-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Base style for the pixel text */
+  .pixel-text {
+    display: inline-block;
+    font-size: 3rem; /* Larger font size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0f0101;
+  }
+  
+  /* Fade in/out effect */
+  .pixel-text.fade-effect {
+    animation: fadeText 4s infinite;
+  }
+  
+  @keyframes fadeText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+
+
+/* Container for profile picture with relative positioning */
+.profile-pic-container {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+  }
+  
+  /* Profile picture styles */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Optional: Slight scale-up on hover */
+  .profile-pic-container:hover .profile-pic {
+    transform: scale(1.05);
+  }
+  
+  /* Base particle styles */
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  
+  /* When hovering the container, animate all particles */
+  .profile-pic-container:hover .particle {
+    animation: particleFall 1.2s ease forwards;
+  }
+  
+  /* Position and delay for each particle for variety */
+  .particle1 {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0.1s;
+  }
+  
+  .particle2 {
+    top: 40%;
+    left: 60%;
+    animation-delay: 0.3s;
+  }
+  
+  .particle3 {
+    top: 10%;
+    left: 50%;
+    animation-delay: 0.5s;
+  }
+  
+  .particle4 {
+    top: 50%;
+    left: 20%;
+    animation-delay: 0.7s;
+  }
+  
+  /* Particle falling animation */
+  @keyframes particleFall {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.5);
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Set up the hero section */
+.hero {
+    background: linear-gradient(135deg, #ff9800, #e65100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  /* Hero content styling remains unchanged */
+  .hero-content {
+    animation: fadeInUp 1.2s ease forwards;
+    margin-top: 60px;
+  }
+  
+  /* Profile picture styling */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+  }
+  
+  /* Headings styling */
+  .hero-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0.5rem 0;
+  }
+  .hero-subheading {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    font-weight: normal;
+  }
+  
+  /* 3D Rocket Container */
+  .rocket-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So it doesn't block clicks */
+    perspective: 800px;   /* Creates a 3D space */
+  }
+  
+  /* 3D Rocket Styling */
+  .rocket-3d {
+    position: absolute;
+    width: 60px; /* Adjust the rocket size */
+    transform-style: preserve-3d;
+    opacity: 0;
+    animation: rocket3dFlight 5s ease-in-out forwards;
+    animation-delay: 1s; /* Wait for hero content to appear */
+  }
+  
+  /* 3D Rocket Flight Animation */
+  @keyframes rocket3dFlight {
+    0% {
+      opacity: 1;
+      transform: translate3d(10%, 50%, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+      transform: translate3d(30%, 20%, -50px) rotateX(20deg) rotateY(10deg) rotateZ(10deg);
+    }
+    50% {
+      transform: translate3d(60%, 10%, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    75% {
+      transform: translate3d(40%, 30%, -50px) rotateX(-20deg) rotateY(-10deg) rotateZ(-10deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(20%, 70%, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+  
+  /* Fade In Up Animation for Hero Content */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Ensure hero content is positioned relatively with a lower z-index */
+/****************************************
+  Basic Hero & Positioning
+*****************************************/
+.hero {
+    background: linear-gradient(135deg, #1a0f9c, #1a0bc0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    position: relative;
+    margin-top: 60px; /* Adjust for fixed header */
+    z-index: 1;       /* Hero content behind rocket initially */
+  }
+  
+  /****************************************
+    Profile Picture
+  *****************************************/
+  .profile-pic-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    z-index: 2; /* On top initially */
+  }
+  
+  /****************************************
+    Rocket & Flame
+  *****************************************/
+  .rocket-3d {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 60px;        /* Adjust rocket size */
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) scale(0); /* Start hidden behind pic */
+    z-index: 1;         /* Behind the pic initially */
+    opacity: 0;
+    animation: rocketFlight 5s ease-in-out forwards;
+    animation-delay: 1s; /* Wait for hero content fade-in */
+  }
+  
+  .rocket-img {
+    width: 100%;        /* The rocket image fills the container */
+    display: block;
+  }
+  
+  /* The flame behind the rocket */
+  .rocket-flame {
+    position: absolute;
+    bottom: -10px;      /* Just below the rocket image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 20px;
+    background: linear-gradient(to bottom, #680fc1 0%, #eb0bd8 100%);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: flameFlicker 0.3s infinite alternate;
+    z-index: -1;        /* Behind the rocket image */
+  }
+  
+  /****************************************
+    Keyframes
+  *****************************************/
+  
+  /* 1) Rocket flight from behind pic to near your text */
+  @keyframes rocketFlight {
+    0% {
+      opacity: 0;
+      transform: translate(-100%, -100%) scale(0) rotate(0deg);
+    }
+    /* Emerge from behind the pic at around 20% */
+    20% {
+      opacity: 1;
+      transform: translate(-210%, -250%) scale(1) rotate(2deg);
+    }
+    
+
+    /* Fly across the screen at 50-80% */
+    50% {
+        opacity: 1;
+      transform: translate(120%,-250%) scale(1) rotate(-10deg);
+    }
+    80% {
+      transform: translate(-50%, -300%) scale(4) rotate(-1deg);
+    }
+    100% {
+        opacity: 1;
+        z-index: 3; 
+        transform: translate(-50%, -300%) scale(4) rotate(-1deg);
+      }
+    /* Land near "A Data Engineer" at 100% */
+    
+  }
+  
+  /* 2) Flame flicker effect */
+  @keyframes flameFlicker {
+    0% {
+      transform: translateX(-50%) scaleY(10);
+    }
+    20% {
+        transform: translateX(-50%) scaleY(1);
+        opacity: 1;
+      }
+    100% {
+      transform: translateX(-50%) scaleY(0.7);
+      opacity: 0.9;
+    }
+  }
+  

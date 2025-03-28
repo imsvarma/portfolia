@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="fade-in">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero" class="section fade-in">
+    <div class="hero-content">
+        <div class="rocket-container">
+        <img src="rocket.png" alt="Rocket" class="rocket-3d">
+    </div>
+        <div class="profile-pic-container">
+            <img src="manikanta.jpeg" alt="Manikanta" class="profile-pic">
+            <!-- Particle elements -->
+            <span class="particle particle1"></span>
+            <span class="particle particle2"></span>
+            <span class="particle particle3"></span>
+            <span class="particle particle4"></span>
+          </div>
+    
+          
+      <!-- Profile Picture -->
+  
+      <!-- Hero Text -->
+      <h1 id="hero-title">I'm Manikanta</h1>
+      
+      <!-- Animated Text Container -->
+      <div class="pixel-container">
+        <span id="pixel-text" class="pixel-text fade-effect" data-text="I am a Tech Enthusiast">
+          I am a Tech Enthusiast
+        </span>
+      </div>
+    </div>
+    
+  </section>
+  
+  
+
+  
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p id="about-content">This is about me content.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div id="projects-list">
+      <!-- Projects will be dynamically injected here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <p id="contact-content">Feel free to reach out at [your email].</p>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
